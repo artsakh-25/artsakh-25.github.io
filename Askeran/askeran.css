@@ -1,0 +1,25 @@
+.map-container {
+    margin: 0 auto;
+ 
+}
+p{
+    color: #4f63ca;
+}
+.d{
+    color: #4f63ca;
+}
+.d:hover{
+    color: #4f63ca;
+}
+.footer{
+    height: 460px;
+}
+img{
+    margin-right: 20px;
+    display: flex;
+    justify-content: baseline;
+    text-align: center;
+    height: 100px;width: auto;
+    float: left;
+}
+ 

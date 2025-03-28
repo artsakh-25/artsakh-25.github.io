@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Հադրութ</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="hadrut.css">
+    <link rel="website icon" type="png" href="../image2/Emblem.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        img {
+            height: 65px;
+            width: 65px;
+            display: flex;
+            position: absolute;
+
+        }
+        #map-container {
+            margin: 0 auto;
+        }
+
+        #map-container {
+            position: relative;
+            width: 1132px;
+            height: 1470px;
+            margin: 0 auto;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="../png (1) (1).png" alt="">
+            <h1>Արցախ</h1>
+        </div>
+        <nav>
+            <ul>
+
+                <li><a href="../index.html">Գլխավոր</a></li>
+                <li><a href="../contact.html">Կոնտակտ</a></li>
+                <li><a href="../traditions.html">Մեր մասին</a></li>
+                <li><a href="../teslakan.html">Տեսլական</a></li>
+                <!-- <li><a href="contact.html"></a></li>
+                <li><a href="religion.html"></a></li> -->
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Արցախի մշակութային ժառանգության պահպանությանն օժադակող կայք</h2>
+            <p class="e">Խաղաղության և ավանդույթների աշխարհ</p>
+            <a href="#" class="cta-button">Իմացիր ավելին</a>
+        </div>
+    </section>
+
+    <section class="intro">
+        <h2 class="a">Հադրութ</h2>
+    </section>
+
+    <section class="content">
+        <div class="service-card">
+            <img src="Village_of_Karaglukh_in_the_Hadrut_Province_of_Nagorno-Karabakh._John_the_Baptist_church.jpg" alt="Դավանաբառեր" class="service-image">      
+            <p style="line-height: 32px; width: 800px; color: #699bd7;"> Հադրութի շրջան, Արցախի Հանրապետության վարչատարածքային ամենաբարձր միավոր, որն ընդգրկում է երկրի
+                հարավարևելյան մասը։ Շրջանի վարչական կենտրոնը Հադրութ քաղաքն է։
+                Շրջանի տարածքի զգալի մասը զբաղեցնում են թավ անտառները, որոնք հարուստ են բազմազան պտուղներով։ Իսկ Քիրսի
+                լեռնաշղթայի Դիզափայտ լեռան լանջերը ծաղկառատ, խոտառատ արոտավայրեր են։ Լեռնային կտրտված մակերևույթի
+                պատճառով դաշտավարության համար նպաստավոր հողատարածքներն ավելի քիչ են։
+            </p>
+        </div>
+
+        <div class="service-card">
+            <h3></h3>
+            <img src="Village_of_Karaglukh_in_the_Hadrut_Province_of_Nagorno-Karabakh._John_the_Baptist_church-2.jpg"
+                alt="Դավանաբառեր" class="service-image">
+            <p class="d"></p>
+            
+            <p style="line-height: 32px; width: 800px; color: #699bd7;"> Շրջանի տարածքը համընկնում է պատմական Արցախի Դիզակի մելիքության տարածքին և աչքի է ընկնում
+                հայկական պատմաճարտարապետական մեծ հետաքրքրություն ներկայացնող բազմաթիվ հուշարձաններով։ Տարածքի գերակշռող
+                մասի բարձրությունը ծովի մակերևույթից կազմում է 700-900 մ, իսկ ամենաբարձր կետը Դիզափայտ լեռան գագաթն է
+                (2480 մ)։ Դիզափայտի «Սպիտակ տաճարը» հնագույն ուխտատեղի է։
+            </p>
+
+        </div>
+        <div>
+            <h1 style="text-align: center; margin: 25px; color: 4f63ca;color: #4f63ca;">Հադրութի Քարտեզ</h1>
+            <p style="text-align: center; margin: 15px;color: 4f63ca;color: #4f63ca; ">Սեղմեք համայնքի վրա՝ մանրամասն տեղեկություն
+                ստանալու համար</p>
+
+            <div >
+                <img src="Հադրութ.svg" usemap="#image-map" alt="Հադրութի քարտեզ" id="map-container">
+                <div class="tooltip" id="tooltip"></div>
+
+                <map name="image-map">
+                </map>
+            </div>
+
+            <script>
+                function showTooltip(event, text) {
+                    const tooltip = document.getElementById('tooltip');
+                    tooltip.textContent = text;
+                    tooltip.style.left = (event.pageX + 10) + 'px';
+                    tooltip.style.top = (event.pageY + 10) + 'px';
+                    tooltip.style.opacity = '1';
+                }
+
+                function hideTooltip() {
+                    document.getElementById('tooltip').style.opacity = '0';
+                }
+            </script>
+        </div>
+
+    </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Հղումներ</h4>
+                    <ul>
+                        <li><a href="../index.html">Գլխավոր</a></li>
+                        <li><a href="../contact.html">Կոնտակտ</a></li>
+                        <li><a href="../traditions.html">Մեր մասին</a></li>
+                        <li><a href="../teslakan.html">Տեսլական</a></li>
+                        <li><a href="../Askeran/askeran.html">Ասկերանի շրջան</a></li>
+                        <li><a href="../Hadrut/Hadrut.html">Հադրութի շրջան</a></li>
+                        <li><a href="../Martakert/martakert.html">Մարտակերտի շրջան</a></li>
+                        <li><a href="../Martuni/martuni.html">Մարտունու շրջան</a></li>
+                        <li><a href="../Qashatax/qashatax.html">Քաշաթախի շրջան</a></li>
+                        <li><a href="../Shahumyan/shahumyan.html">Շահումյանի շրջան</a></li>
+                        <li><a href="../Shushi/shushi.html">Շուշիի շրջան</a></li>
+                        <li><a href="../Stepanakert/stepanakert.html">Ստեփանակերտի շրջան</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Հետևեք մեզ</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

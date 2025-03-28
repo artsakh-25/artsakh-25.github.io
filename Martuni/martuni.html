@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Մարտունի</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="website icon" type="png" href="../image2/Emblem.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        img {
+            height: 65px;
+            width: 65px;
+            display: flex;
+            position: absolute;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../png (1) (1).png" alt="">
+            <h1>Արցախ</h1>
+        </div>
+        <nav>
+            <ul>
+
+                <li><a href="../index.html">Գլխավոր</a></li>
+                <li><a href="../contact.html">Կոնտակտ</a></li>
+                <li><a href="../traditions.html">Մեր մասին</a></li>
+                <li><a href="../teslakan.html">Տեսլական</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Արցախի մշակութային ժառանգության պահպանությանն օժադակող կայք</h2>
+            <p class="e">Խաղաղության և ավանդույթների աշխարհ</p>
+            <a href="#" class="cta-button">Իմացիր ավելին</a>
+        </div>
+    </section>
+
+    <section class="intro">
+        <h2 class="a">Մարտունի</h2>
+        <p>
+    </section>
+
+    <section class="content">
+        <div class="service-card">
+            <img src="WhatsApp Image 2025-03-28 at 18.00.28_46c36b4a.png" alt="Դավանաբառեր" class="service-image">
+
+            <p style="line-height: 32px; width: 800px; color: #699bd7;"> Մարտունու շրջանի տարածքի զգալի մասը հարթավայրային է և ծովի մակերևույթից ունի մինչև 400մ բարձրություն։
+                Շրջանի հարթավայրային մասում, հատկապես Մարտունի քաղաքում, Կուրոպատկինոյի, Գևորգավանի, Աղբուռունի,
+                Ալաբալու հատվածներում կլիմայական պայմանները չոր մերձարևադարձային են, մթնոլորտային տեղումները սակավ, ձյան
+                կայուն շերտ համարյա չի լինում։
+            </p>
+        </div>
+
+        <div class="service-card">
+            <img src="WhatsApp Image 2025-03-28 at 18.03.10_450cd0b4.jpg" alt="Դավանաբառեր" class="service-image">
+
+            <p style="line-height: 32px; width: 800px; color: #699bd7;">
+                Ռելիեֆ
+
+                Շրջանի արևմտյան կեսը նախալեռնային, թույլ թեքություն ունեցող մակերևույթ ունի, այստեղի կլիմայական
+                պայմանները առավել նպաստավոր են գյուղատնտեսության համար։
+            </p>
+
+        </div>
+        <div>
+            <h1 style="text-align: center; margin: 25px;color: #4f63ca;">Մարտունու քարտեզը</h1>
+            <p style="text-align: center; margin: 15px;color: #4f63ca;">Սեղմեք համայնքի վրա՝ մանրամասն տեղեկություն
+                ստանալու համար</p>
+
+            <div class="map-container">
+                <img src="Մարտունի.svg" class="map-img" usemap="#image-map"
+                    alt="Արցախի Քարտեզ">
+                <div class="tooltip" id="tooltip"></div>
+
+                <map name="image-map">
+                    <area target="_blank" alt="Շահումյան" title="Շահումյան" href="Shahumyan/shahumyan.html"
+                        coords="47,200,122,390,137,231,151,262,173,265,205,248,237,233,279,188,271,167,287,159,279,139,349,167,311,156,382,185,389,207,417,223,442,247,485,200,498,167,535,151,573,162,615,175,609,207,615,228,645,255,624,269,654,288,596,279,518,266,487,283,449,266,417,263,388,292,389,318,365,330,353,347,347,367,334,383,326,407,300,405,268,394,237,397,218,386,209,364,165,373,141,379,119,248,119,219,78,484"
+                        shape="poly" onmouseover="showTooltip(event, 'Շահումյան')" onmouseout="hideTooltip()">
+
+                    <area target="_blank" alt="Մարտակերտ" title="Մարտակերտ" href="Martakert/martakert.html"
+                        coords="332,402,336,383,358,365,366,335,393,320,388,292,415,266,450,265,468,285,493,283,519,268,553,275,590,278,633,288,655,292,656,332,669,336,689,329,677,355,672,380,673,399,675,430,664,472,617,468,568,476,517,478,477,454,421,461,371,462,375,435,353,424"
+                        shape="poly" onmouseover="showTooltip(event, 'Մարտակերտ')" onmouseout="hideTooltip()">
+
+                </map>
+            </div>
+
+            <script>
+                function showTooltip(event, text) {
+                    const tooltip = document.getElementById('tooltip');
+                    tooltip.textContent = text;
+                    tooltip.style.left = (event.pageX + 10) + 'px';
+                    tooltip.style.top = (event.pageY + 10) + 'px';
+                    tooltip.style.opacity = '1';
+                }
+
+                function hideTooltip() {
+                    document.getElementById('tooltip').style.opacity = '0';
+                }
+            </script>
+
+            <footer class="footer">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="footer-col">
+                            <h4>Հղումներ</h4>
+                            <ul>
+                                <li><a href="../index.html">Գլխավոր</a></li>
+                                <li><a href="../contact.html">Կոնտակտ</a></li>
+                                <li><a href="../traditions.html">Մեր մասին</a></li>
+                                <li><a href="../teslakan.html">Տեսլական</a></li>
+                                <li><a href="../Askeran/askeran.html">Ասկերանի շրջան</a></li>
+                                <li><a href="../Hadrut/Hadrut.html">Հադրութի շրջան</a></li>
+                                <li><a href="../Martakert/martakert.html">Մարտակերտի շրջան</a></li>
+                                <li><a href="../Martuni/martuni.html">Մարտունու շրջան</a></li>
+                                <li><a href="../Qashatax/qashatax.html">Քաշաթախի շրջան</a></li>
+                                <li><a href="../Shahumyan/shahumyan.html">Շահումյանի շրջան</a></li>
+                                <li><a href="../Shushi/shushi.html">Շուշիի շրջան</a></li>
+                                <li><a href="../Stepanakert/stepanakert.html">Ստեփանակերտի շրջան</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-col">
+                            <h4>Հետևեք մեզ</h4>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+</body>
+
+</html>

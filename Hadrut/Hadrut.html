@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Հադրութ</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="hadrut.css">
+    <link rel="website icon" type="png" href="../image2/Emblem.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   <style>
+        /* Մոդալի ստիլեր */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .modal-content {
+            background-color: #f8f9fa;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 60%;
+            max-width: 500px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: modalopen 0.5s;
+        }
+
+        @keyframes modalopen {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: black;
+        }
+
+        /* Քարտեզի կոնտեյներ */
+        #map-container {
+            margin: 0 auto;
+        }
+
+        #map-container {
+            position: relative;
+            width: 1132px;
+            height: 1470px;
+            margin: 0 auto;
+
+        }
+
+        img {
+            height: 65px;
+            width: 65px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../png (1) (1).png" alt="">
+            <h1>Արցախ</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Գլխավոր</a></li>
+                <li><a href="../contact.html">Կոնտակտ</a></li>
+                <li><a href="../traditions.html">Մեր մասին</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Արցախյան Ավանդազրույցների Քարտզագրված Շտեմարան</h2>
+            <p class="e">Խաղաղության և ավանդույթների աշխարհ</p>
+            <p class="e">2024-2025</p>
+            <a href="#" class="cta-button">Իմացիր ավելին</a>
+        </div>
+    </section>
+
+  <section class="intro">
+        <h2 class="a">Հադրութ</h2>
+    </section>
+
+    <section class="content">
+
+
+            <h1 style="text-align: center; margin: 25px;color: #4f63ca;">Հադրութի Քարտեզ</h1>
+            <p style="text-align: center; margin: 15px;color: #4f63ca;">Սեղմեք համայնքի վրա՝ մանրամասն տեղեկություն
+                ստանալու համար</p>
+
+            <div id="map-container">
+                <img src="Հադրութ.svg" usemap="#image-map" alt="Ասկերանի քարտեզ" id="map-container">
+
+                <map name="image-map">
+                    <area target="_self" alt="Հադրութ" title="Հադրութ" href="#hadrut"
+                        coords="603,314,688,310,695,336,610,373" shape="poly" class="modal-trigger">
+                    <area target="_self" alt="Խանձաձոր" title="Խանձաձոր" href="#khandzadzor"
+                        coords="276,373,388,368,383,408,277,408" shape="poly" class="modal-trigger">
+                    <area target="_self" alt="Մեծ Թաղեր" title="Մեծ Թաղեր" href="#mets-tagher"
+                          coords="428,89,564,92,528,141,448,146" shape="poly" class="modal-trigger">
+                </map>
+            </div>
+
+            <!-- Մոդալ պատուհաններ -->
+            <div id="hadrut-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Հադրութ</h2>
+                    <p></p>
+                    <p>
+                        Աբալյան Ռոմելլա Արթուրի, 27.09.2001 Արցախ,Հադրութ։ Ներկայիս բնակավայրը Արարատի մարզ Մասիս քաղաք։ Կրթությունը ` ԵՊՀ ԼՄՀ։
+                    </p>
+                      <a href="../Shtemaran/hadrut_shtemaran%20hadrut.html"><p>Կարդալ պատմությունը</p></a>
+                </div>
+            </div>
+
+            <div id="khandzadzor-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Խանձաձոր</h2>
+                    <p>1. Այվազյան Ռիտա, ծնվել է 1969 թվականին Արցախի Հանրապետության Խանձաձոր գյուղում, աշխատել է գրադարանավար։ Մինչեւ 2020 թվականը ապրել է խանձաձորում։ Գյուղից դուրս է եկել 2020 թվականի սեպտեմբերի 17-ին։ Այժմ բնակվում է ՀՀ Արարատի մարզի Ռանչպար գյուղում։</p>
+                    <a href="../Shtemaran/hadrut_shtemaran%20khandzadzor%20rita.html"><p>Կարդալ պատմությունը</p></a>
+                    <p>----------------------------------------------------------------</p>
+                    <p>2. Այվազյան Ռուզաննա, ծնվել է 1988 թ․ հունվարի 14-ին Արցախի Հանրապետության Հադրութի շրջանի Խանձաձոր գյուղում։ Ամուսնացել է հադրութի շրջանի Առաքել գյուղում, մինչև 2020 թվականի պատերազմը ապրել է Առաքել գյուղում, աշխատում էր մանկապարտզում։ 2020 թվականից հետո եկել է հայաստան, 2021 թվականի գարնանը գնացել է Ստեփանակերտ՝ աշխատանքի համար դիմում գրելու։ Ապրիլ-մայիս ամիսներին վերադարձել է Արցախ և 2023 թվականի սեպտեմբերի 28-ին դուրս եկել Արցախից։ Այժմ բնակվում է ՀՀ Արարատի մարզի Ռանչպար գյուղում։</p>
+                    <a href="../Shtemaran/hadrut_shtemaran%20khandzadzor%20ruzanna.html"><p>Կարդալ պատմությունը</p></a>
+                </div>
+            </div>
+
+            <div id="mets-tagher-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Մեծ Թաղեր</h2>
+                    <p></p>
+                    <p>
+                        Արծիվ Լալայանը 50 տարեկան, Հադրութի շրջան, Մեծ Թաղեր գյուղ, հիմա ապրում է Այնթապում: Նկարիչ է:
+                    </p>
+                    <a href="../Shtemaran/hadrut_shtemaran%20mets%20tagher.html"><p>Կարդալ պատմությունը</p></a>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="footer-col">
+                    <h4>Հղումներ</h4>
+                    <ul>
+                        <li><a href="../index.html">Գլխավոր</a></li>
+                        <li><a href="../contact.html">Կոնտակտ</a></li>
+                        <li><a href="../traditions.html">Մեր մասին</a></li>
+                        <li><a href="../teslakan.html">Տեսլական</a></li>
+                        <li><a href="../Askeran/askeran.html">Ասկերանի շրջան</a></li>
+                        <li><a href="../Hadrut/Hadrut.html">Հադրութի շրջան</a></li>
+                        <li><a href="../Martakert/martakert.html">Մարտակերտի շրջան</a></li>
+                        <li><a href="../Martuni/martuni.html">Մարտունու շրջան</a></li>
+                        <li><a href="../Qashatax/qashatax.html">Քաշաթախի շրջան</a></li>
+                        <li><a href="../Shahumyan/shahumyan.html">Շահումյանի շրջան</a></li>
+                        <li><a href="../shushi.html">Շուշիի շրջան</a></li>
+                        <li><a href="../Stepanakert/stepanakert.html">Ստեփանակերտի շրջան</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Հետևեք մեզ</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Մոդալի ֆունկցիոնալություն
+        document.addEventListener('DOMContentLoaded', function () {
+            // Ստանում ենք բոլոր մոդալ տրիգերները
+            const triggers = document.querySelectorAll('.modal-trigger');
+
+            // Ստանում ենք բոլոր մոդալները
+            const modals = document.querySelectorAll('.modal');
+
+            // Ստանում ենք բոլոր փակելու կոճակները
+            const closeButtons = document.querySelectorAll('.close');
+
+            // Յուրաքանչյուր տրիգերի համար ավելացնում ենք event listener
+            triggers.forEach(trigger => {
+                trigger.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = this.getAttribute('href').substring(1) + '-modal';
+                    document.getElementById(target).style.display = 'block';
+                });
+            });
+
+            // Փակելու կոճակների համար
+            closeButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    this.closest('.modal').style.display = 'none';
+                });
+            });
+
+            // Փակել մոդալը երբ օգտագործողը կտտացնի դրսում
+            window.addEventListener('click', function (e) {
+                if (e.target.classList.contains('modal')) {
+                    e.target.style.display = 'none';
+                }
+            });
+
+            // ESC ստեղնը մոդալը փակելու համար
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    modals.forEach(modal => {
+                        modal.style.display = 'none';
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

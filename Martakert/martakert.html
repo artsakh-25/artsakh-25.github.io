@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Մարտակերտ</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="website icon" type="png" href="../image2/Emblem.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Մոդալի ստիլեր */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .modal-content {
+            background-color: #f8f9fa;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 60%;
+            max-width: 500px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: modalopen 0.5s;
+        }
+
+        @keyframes modalopen {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: black;
+        }
+
+        /* Քարտեզի կոնտեյներ */
+        #map-container {
+            margin: 0 auto;
+        }
+
+        #map-container {
+            position: relative;
+            width: 1132px;
+            height: 1470px;
+            margin: 0 auto;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="../png (1) (1).png" alt="">
+            <h1>Արցախ</h1>
+        </div>
+        <nav>
+            <ul>
+
+                <li><a href="../index.html">Գլխավոր</a></li>
+                <li><a href="../contact.html">Կոնտակտ</a></li>
+                <li><a href="../traditions.html">Մեր մասին</a></li>
+
+                <!-- <li><a href="contact.html"></a></li>
+                <li><a href="religion.html"></a></li> -->
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>ԱՐՑԱԽՅԱՆ ԱՎԱՆԴԱԶՐՈՒՅՑՆԵՐԻ ՔԱՐՏԵԶԱԳՐՎԱԾ ՇՏԵՄԱՐԱՆ</h2>
+            <p class="e">Խաղաղության և ավանդույթների աշխարհ</p>
+            <p class="e">2024-2025</p>
+            <a href="#" class="cta-button">Իմացիր ավելին</a>
+        </div>
+    </section>
+
+    <section class="intro">
+        <h2 class="a">Մարտակերտ</h2>
+    </section>
+
+
+
+    <div>
+        <h1 style="text-align: center; margin: 25px;color:#4f63ca ;">Մարտակերտի քարտեզ</h1>
+        <p style="text-align: center; margin: 15px; color: #4f63ca;">Սեղմեք համայնքի վրա՝ մանրամասն տեղեկություն
+            ստանալու համար</p>
+
+        <div class="map-container" style="height: 1470px; width: 1132px;">
+            <img src="Մարտակերտ.svg" class="map-img" usemap="#image-map" alt="Արցախի Քարտեզ" id="map-container">
+            <!--  <div class="tooltip" id="tooltip"></div> -->
+
+            <map name="image-map">
+                <area target="_blank" alt="Մարտակերտ" title="Մարտակերտ" href="#martakert"
+                    coords="768,417,951,415,946,381,757,385" shape="poly" class="modal-trigger">
+                <area target="_blank" alt="Առաջաձոր" title="Առաջաձոր" href="#arajadzor"
+                    coords="466,717,467,682,505,687,510,698,516,710,551,706,553,725" shape="poly" class="modal-trigger">
+                <area target="_blank" alt="Ներքին Հոռաթաղ" title="Ներքին Հոռաթաղ" href="#nerqin-horatax"
+                    coords="731.46,448.97,908.45,447.10,906.57,431.68,726.29,427.48" shape="poly" class="modal-trigger">
+                <area target="_blank" alt="Վաղուհաս" title="Վաղուհաս" href="#vaxuhas"
+                    coords="270.42,621.87,367.14,624.67,350.70,610.65,316.90,609.72,307.51,591.96,286.85,593.36"
+                    shape="poly" class="modal-trigger">
+                <area target="_blank" alt="Աղաբեկալանջ" title="Աղաբեկալանջ" href="#axabekalanj"
+                    coords="755.40,403.64,715.02,405.05,714.08,395.70,735.68,378.41,763.38,356.92,805.63,330.28,811.74,340.56,760.56,376.07"
+                    shape="poly" class="modal-trigger">
+                <area target="_blank" alt="Հաթերք" title="Հաթերք" href="#haterq"
+                    coords="306.57,464.86,370.42,468.13,371.36,481.21,360.09,507.85,344.60,516.26,350.70,516.26,335.21,512.99"
+                    shape="poly" class="modal-trigger">
+                <area target="_blank" alt="Չլդրան" title="Չլդրան" href="#chldran"
+                    coords="538.03,598.50,550.23,605.05,562.00,612.06,616.43,608.79,617.37,629.35,554.46,632.62,533.80,616.26"
+                    shape="poly" class="modal-trigger">
+                <area target="_blank" alt="Թբղլու" title="Թբղլու" href="#tbxlu"
+                    coords="508.45,774.21,505.16,760.19,434.27,760.19,436.15,784.49" shape="poly" class="modal-trigger">
+                <area target="_blank" alt="Քոլատակ" title="Քոլատակ" href="#qolatak"
+                    coords="388.73,820.93,479.34,822.80,497.18,803.64,466.20,796.17,391.97,798.50,488.73,794.30,388.73,799.44"
+                    shape="poly" class="modal-trigger">
+                <area target="_blank" alt="Վանք" title="Վանք" href="#vanq"
+                    coords="413.62,708.04,385.92,698.13,331.46,699.07,327.23,714.02,383.57,727.10,401.41,728.04"
+                    shape="poly" class="modal-trigger">
+                <area target="_blank" alt="Չափար" title="Չափար" href="#chapar"
+                    coords="219.25,530.84,219.25,511.68,125.35,513.55,130.52,526.64,204.69,534.11" shape="poly" class="modal-trigger">
+
+            </map>
+        </div>
+
+    </div>
+
+
+    <div id="martakert-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Մարտակերտ</h2>
+            <p>Ռոզա Առստամյան, Արցախ, ք․ Մարտակերտ, վերաբնակեցվել է ք․ Եղվարդում։</p>
+            <a href="../Shtemaran/martakert_shtemaran%20martakert_roza.html"><p>Կարդալ պատմությունը</p></a>
+            <p>----------------------------------------------------------------</p>
+            <p>Անի Գասպարյան (սեփական գրառումներ): Ծնվել է Արցախի Մարտակերտ քաղաքում, 2005 թվականին, ապրել է Մարտակերտում: Հայաստան է տեղափոխվել 2023թ. բռնագաղթի ժամանակ: ԵՊՀ Հայ բանասիրության ֆակուլտետի ուսանողուհի է, ապրում է Կոտայքի մարզի Նոր Հաճնում։</p>
+            <a href="../Shtemaran/martakert_shtemaran%20martakert_ani.html"><p>Կարդալ պատմությունը</p></a>
+        </div>
+    </div>
+    <div id="arajadzor-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Առաջաձոր</h2>
+            <p>Առուշանյան Էդիկ, 1954, Մարտակերտի շրջան գ. Առաջաձոր:
+                Առուշանյան Նորա, 1955թ, Գանձասար, ամուսնանալուց հետո գ. Առաջաձոր: Այժմ բնակվում են Հրազդան քաղաքում:
+                Պատմում է տոհﬕ, Գանձասարի, Առաջաձոր գյուղի թաղերի, Արցախից հեռանալու, մասին։</p>
+            <a href="../Shtemaran/martakert_shtemaran%20arajadzor.html"><p>Կարդալ պատմությունը</p></a>
+        </div>
+    </div>
+    <div id="nerqin-horatax-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Ներքին Հոռաթաղ</h2>
+            <p>Էդվարդ Գասպարյան, ծնված 1976 թվականին Մարտակերտի Ներքին Հոռաթաղ գյուղում: Ապրել է Մարտակերտում, 2023-ից՝ Կոտայքի մարզի Նոր Գեղիում։</p>
+            <a href="../Shtemaran/martakert_shtemaran%20nerqin-horatax_edvard.html"><p>Կարդալ պատմությունը</p></a>
+            <p>----------------------------------------------------------------</p>
+            <p>Սլավիկ Գասպարյան, ծնված 1953 թ., Մարտակերտի Ներքին Հոռաթաղ գյուղում, ապրում է Նոր Հաճնում, մասնագիտությամբ ռենտգենոլոգ, պատմությունը լսել է ժողովրդից։</p>
+            <a href="../Shtemaran/martakert_shtemaran%20nerqin-horatax_slavik.html"><p>Կարդալ պատմությունը</p></a>
+            <p>----------------------------------------------------------------</p>
+            <p>Էլինա Աթաբեկյան ,ծնվել է 2004 թվականին Մարտակերտի շրջանի Ներքին Հոռաթաղ գյուղում, ապրում է քաղաք Երևանում:</p>
+            <a href="../Shtemaran/martakert_shtemaran%20nerqin-horatax_elina.html"><p>Կարդալ պատմությունը</p></a>
+        </div>
+    </div>
+    <div id="vaxuhas-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Վաղուհաս</h2>
+            <p>Ոսկան Աղաջանյան, ծնվել է 1952 թ, Արցախի Հանրապետություն, գյուղ Վաղուհաս: Մահացել է 2024 թ դեկտեմբեր ամսին։</p>
+            <a href="../Shtemaran/martakert_shtemaran%20vaxuhas_voskan.html"><p>Կարդալ պատմությունը</p></a>
+            <p>----------------------------------------------------------------</p>
+            <p>Սիլվա Աղաջանյան, 16 տ․, ծնվել է Մարտակերտի շրջանի Վաղուհաս գյուղում, ներկայումս ապրում է Բյուրականում։</p>
+            <a href="../Shtemaran/martakert_shtemaran%20vaxuhas_silva.html"><p>Կարդալ պատմությունը</p></a>
+            <p>----------------------------------------------------------------</p>
+            <p>Քոչարյան Գրետա, ծնվ. 1976թ. Մարտակերտի շրջանի Վաղուհաս գյուղում, այժմ բնակվում է Արարատի մարզի Մասիս քաղաքում: Պատմում է Շողակաթ աղբյուրի, գյուղի աշխարհագրական դիրքի, Վաղուհաս անվան ծագման, Խնկավան գյուղի, Մարիամ քաղաքի, Կուվա խաչի կամ Կուլա խաչի, Բաբան ծովի, Սատանի ձորի, տոհմերի, Կարմիր վանքի, չարխափան միջոցների, պատերազմի, տեղահանման մասին։</p>
+            <a href="../Shtemaran/martakert_shtemaran%20vaxuhas_greta.html"><p>Կարդալ պատմությունը</p></a>
+        </div>
+    </div>
+    <div id="axabekalanj-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Աղաբեկալանջ</h2>
+            <p>Լարա Արբահամյանը ծնվել է 2005 թվականի ապրիլի 9-ին Մարտակերտի շրջանի Աղաբեկալանջ գյուղում, այժմ ապրում է ՀՀ Արմավիր քաղաքում, սովորում է ՀՊՏՀ-ի կառավարում բաժնում:</p>
+            <a href="../Shtemaran/martakert_shtemaran%20axabekalanj.html"><p>Կարդալ պատմությունը</p></a>
+        </div>
+    </div>
+    <div id="haterq-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Հաթերք</h2>
+            <p>Ամալյա Աբրահամյանի (74 տ., Ծնվ. Հաթերք գյուղում, ապրում է Հրազդանում):</p>
+            <a href="../Shtemaran/martakert_shtemaran%20haterk_amalya.html"><p>Կարդալ պատմությունը</p></a>
+            <p>----------------------------------------------------------------</p>
+            <p>Աննա Իսկանդարյան, ծնվել է 1987 թ․, Արցախի Հաթերք գյուղի բնակիչ, բռնի տեղահանումից հետո բնակություն է հաստատել Հրազդան քաղաքում: Պատմում է Հաթերք գյուղի, Հուպանց տոհմի, Փարուն տոհմի մասին։</p>
+            <a href="../Shtemaran/martakert_shtemaran%20haterk_anna.html"><p>Կարդալ պատմությունը</p></a>
+            <p>----------------------------------------------------------------</p>
+            <p>Հարությունյան Վարդուհի, ծնվել է 1959 թ․, Արցախի Հանրապետության Մարտակերտի շրջանի Հաթերք գյուղում, բռնի տեղահանումից հետո բնակություն է հաստատել Հրազդան քաղաքում: Պատմում է Դերանց ծյորի մասին։</p>
+            <a href="../Shtemaran/martakert_shtemaran%20haterk_varduhi.html"><p>Կարդալ պատմությունը</p></a>
+        </div>
+    </div>
+    <div id="chldran-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Չլդրան</h2>
+            <p>Ղուկասյան Լյուդմիլա Գրիշայի, ծնվել է Մարտակերտի շրջանի Չլդրան գյուղում, ամուսնացել է Կճողոտ գյուղում, ունի միջին մասնագիտական կրթություն: 2020-2023 թթ. Ապրել է Ասկերանի շրջանի Իվանյան գյուղում: Այժմ՝ ք. Հրազդան։ Պատմում է Կճողոտի, Չլդրանի, անվան ծագման, թաղամասերի, Լենկ Թեմուրի վերջին հանգրվանի, Սռնատան, Կիչանի, Սրխավենդի, Առաջաձորի, Հովտաշենի, Կենեն պատի, Չըռչըռ աղբյուրի մասին։</p>
+            <a href="../Shtemaran/martakert_shtemaran%20chldran.html"><p>Կարդալ պատմությունը</p></a>
+        </div>
+    </div>
+    <div id="tbxlu-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Թբղլու</h2>
+            <p>Բեգլարյան Գավրուշա, ծնվել է 1959 թվականին Մարտակերտի շրջանի Թըբըղլու գյուղում: Այժմ բնակվում են ՀՀ Աշտարակ քաղաքում:
+                Գավրուշա Բեգլարյանը պատﬔց, որ բանակից վերադառնալուց հետո ﬔկնել է Ռուսաստան, աշխատել և ապրել է այնտեղ ﬕնչև Արցախյան պատերազﬕ սկսվելը: Պատերազﬕ սկսվելուն պես վերադարձել է Արցախ և կռվել ﬕնչև 1994 թվականը: Պատերազﬕց հետո աﬔն ինչ սկսել է նորից, կառուցել է տուն, հիﬓարկ է ունեցել, արել է աﬔն բան, որ երեխները ոչ ﬕ բանի կարիք չունենան: 44-օրյա պատերազﬕ ժամանակ նրա 2 տղաները եղել են ռազմաճակատում, ինքը և կինը նույնպես ﬓացել են Արցախում, և փորձել են որևէ բանով օգնել: Պատմում է Հակոբա վանքի, Անապատա տարածքի, Կաչաղակաբերդի, Վընըհետե-ոտքի հետքերի, Քառասուն աղջիկ սարի, Խանձաձորի, տոհﬔրի, Հայոբա վանքի մասին։</p>
+            <a href="../Shtemaran/martakert_shtemaran%20tbxlu.html"><p>Կարդալ պատմությունը</p></a>
+        </div>
+    </div>
+    <div id="qolatak-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Քոլատակ</h2>
+            <p>Lorem...</p>
+            <p>Lorem:</p>
+        </div>
+    </div>
+    <div id="vanq-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Վանք</h2>
+            <p>Լուսինե Բաղրամյան (ծնվ. Մարտակերտի շրջանի Վանք գյուղում, Պապը եղել է Մարշալ Բաղրամյանի ազգականներից: Մեծ ազգ են, ունեն տոհմածառ, կոչվում են Բղրամանց: Լուսինե Բաղրամյանը 2000 թվականից աշխատել է Վանքի միջնակարգ դպրոցում՝ որպես հայոց լեզվի և գրականության ուսուցչուհի, այնուհետև՝ որպես կազմակերպիչ: 2010-2023 թթ. աշխատել է Վանքի մանկապարտեզում՝ որպես տնօրեն): Պատմում է Գանձասարի, Ռուզաննայի բերդի, Ծովեն քարի, Էշի հուշարձանի, Հակոբավանքի մասին։</p>
+            <a href="../Shtemaran/martakert_shtemaran%20vanq.html"><p>Կարդալ պատմությունը</p></a>
+        </div>
+    </div>
+    <div id="chapar-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Չափար</h2>
+            <p>Հրաչիկ Սարգսյան, Արցախի Հանրապետության բնակիչ, ծնված 1933 թ., Մարտակերտի շրջան, գյուղ Չափար։ Պատմում է Չափարի, անվան ծագման, Ղալա քարի և Ղալա աղբյուրի, Չափարի թաղերի, աղբյուրների, մանկության պատմության մասին։</p>
+            <a href="../Shtemaran/martakert_shtemaran%20chapar_hrachik.html"><p>Կարդալ պատմությունը</p></a>
+            <p>----------------------------------------------------------------</p>
+            <p>Սարգսյան Իրինա, Արցախի Հանրապետության բնակչուհի, ծնված 1971թ Մարտակերտ, գյուղ Չափար: Պատմում է Թամբանին ջուրի, Սուրբ Մինասի, Զինավար անվան, Էրﬕն աղբյուրի, Չափար գյուղի և թուրքական գյուղ Գրավանի մասին։</p>
+            <a href="../Shtemaran/martakert_shtemaran%20chapar_irina.html"><p>Կարդալ պատմությունը</p></a>
+            <p>----------------------------------------------------------------</p>
+            <p>Սարգսյան Գոհար, ծնվ. 1978թ. Վաղուհաս գյուղում, ամուսնացել է Չափար գյուղում, այժմ բնակվում է Արարատի մարզի Մասիս քաղաքում: Պատմում է Քյոնաշեն գյուղի, բուժիչ աղբյուրների և բույսերի, ճաշատեսակների, արցախյան խաղերի մասին։</p>
+            <a href="../Shtemaran/martakert_shtemaran%20chapar_gohar.html"><p>Կարդալ պատմությունը</p></a>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="footer-col">
+                    <h4>Հղումներ</h4>
+                    <ul>
+                        <li><a href="../index.html">Գլխավոր</a></li>
+                        <li><a href="../contact.html">Կոնտակտ</a></li>
+                        <li><a href="../traditions.html">Մեր մասին</a></li>
+                        <li><a href="../teslakan.html">Տեսլական</a></li>
+                        <li><a href="../Askeran/askeran.html">Ասկերանի շրջան</a></li>
+                        <li><a href="../Hadrut/Hadrut.html">Հադրութի շրջան</a></li>
+                        <li><a href="../Martakert/martakert.html">Մարտակերտի շրջան</a></li>
+                        <li><a href="../Martuni/martuni.html">Մարտունու շրջան</a></li>
+                        <li><a href="../Qashatax/qashatax.html">Քաշաթախի շրջան</a></li>
+                        <li><a href="../Shahumyan/shahumyan.html">Շահումյանի շրջան</a></li>
+                        <li><a href="../Shushi/shushi.html">Շուշիի շրջան</a></li>
+                        <li><a href="../Stepanakert/stepanakert.html">Ստեփանակերտի շրջան</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Հետևեք մեզ</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Մոդալի ֆունկցիոնալություն
+        document.addEventListener('DOMContentLoaded', function () {
+            // Ստանում ենք բոլոր մոդալ տրիգերները
+            const triggers = document.querySelectorAll('.modal-trigger');
+
+            // Ստանում ենք բոլոր մոդալները
+            const modals = document.querySelectorAll('.modal');
+
+            // Ստանում ենք բոլոր փակելու կոճակները
+            const closeButtons = document.querySelectorAll('.close');
+
+            // Յուրաքանչյուր տրիգերի համար ավելացնում ենք event listener
+            triggers.forEach(trigger => {
+                trigger.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = this.getAttribute('href').substring(1) + '-modal';
+                    document.getElementById(target).style.display = 'block';
+                });
+            });
+
+            // Փակելու կոճակների համար
+            closeButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    this.closest('.modal').style.display = 'none';
+                });
+            });
+
+            // Փակել մոդալը երբ օգտագործողը կտտացնի դրսում
+            window.addEventListener('click', function (e) {
+                if (e.target.classList.contains('modal')) {
+                    e.target.style.display = 'none';
+                }
+            });
+
+            // ESC ստեղնը մոդալը փակելու համար
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    modals.forEach(modal => {
+                        modal.style.display = 'none';
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

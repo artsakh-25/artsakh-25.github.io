@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ասկերան</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="askeran.css">
+    <link rel="website icon" type="png" href="../image2/Emblem.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Մոդալի ստիլեր */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .modal-content {
+            background-color: #f8f9fa;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 60%;
+            max-width: 500px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: modalopen 0.5s;
+        }
+
+        @keyframes modalopen {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: black;
+        }
+
+        /* Քարտեզի կոնտեյներ */
+        #map-container {
+            margin: 0 auto;
+        }
+
+        #map-container {
+            position: relative;
+            width: 1132px;
+            height: 1470px;
+            margin: 0 auto;
+
+        }
+
+        img {
+            height: 65px;
+            width: 65px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../png (1) (1).png" alt="">
+            <h1>Արցախ</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Գլխավոր</a></li>
+                <li><a href="../contact.html">Կոնտակտ</a></li>
+                <li><a href="../traditions.html">Մեր մասին</a></li>
+                <!-- <li><a href="index.html">Շտեմարան</a></li> -->
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>ԱՐՑԱԽՅԱՆ ԱՎԱՆԴԱԶՐՈՒՅՑՆԵՐԻ ՔԱՐՏԵԶԱԳՐՎԱԾ ՇՏԵՄԱՐԱՆ</h2>
+            <p class="e">Խաղաղության և ավանդույթների աշխարհ</p>
+            <p class="e">2024-2025</p>
+            <a href="#" class="cta-button">Իմացիր ավելին</a>
+        </div>
+    </section>
+
+  <!--   <section class="intro">
+        <h2 class="a" style="color:#4f63ca ;">Ասկերան</h2>
+    </section> -->
+
+    <section class="content">
+
+
+        <div>
+            <h1 style="text-align: center; margin: 25px;color: #4f63ca;">Ասկերանի Քարտեզ</h1>
+            <p style="text-align: center; margin: 15px;color: #4f63ca;">Սեղմեք համայնքի վրա՝ մանրամասն տեղեկություն
+                ստանալու համար</p>
+
+            <div id="map-container">
+                <img src="Ասկերան.svg" usemap="#image-map" alt="Ասկերանի քարտեզ" id="map-container">
+
+                <map name="image-map">
+                    <area target="_self" alt="Խանապատ" title="Խանապատ" href="#khangapat"
+                        coords="672,426,579,424,623,470" shape="poly" class="modal-trigger">
+                    <area target="_self" alt="Նորագյուղ" title="Նորագյուղ" href="#noragyugh"
+                        coords="491,475,595,481,516,523" shape="poly" class="modal-trigger">
+                    <area target="_self" alt="Իվանյան" title="Իվանյան" href="#ivanyan"
+                        coords="591,585,586,557,494,590,495,605,553,607" shape="poly" class="modal-trigger">
+                    <area target="_self" alt="Այգեստան" title="Այգեստան" href="#aygestan"
+                        coords="468.54,658.22,342.25,661.03,342.25,678.03,466.2,684.04" shape="poly"
+                        class="modal-trigger">
+                    <area target="_self" alt="Ավետարանոց" title="Ավետարանոց" href="#avetaranots"
+                        coords="628.64,1069.48,628.64,1034.74,593.43,1028.64,593.43,1045.54,579.34,1053.52,543.19,1053.52,516.43,1054.46,507.51,1059.62,512.21,1067.61,535.21,1067.61,527.23,1072.77,561.5,1072.77,587.32,1075.59,608.45,1072.77,608.45,1027.7,603.29,1075.59"
+                        shape="poly" class="modal-trigger">
+                    <area target="_self" alt="Արմենավան" title="Արմենավան" href="#armenavan"
+                        coords="653.52,302.82,653.52,290.61,791.55,288.73,787.32,303.76" shape="poly"
+                        class="modal-trigger">
+                    <area target="_self" alt="Խրամորթ" title="Խրամորթ" href="#khramort"
+                        coords="636.62,372.3,737.56,373.24,731.46,389.2,671.36,392.02,661.5,408.45,646.48,411.27"
+                        shape="poly" class="modal-trigger">
+                    <area target="_self" alt="Ասկերան" title="Ասկերան" href="#askeran"
+                        coords="761.5,503.76,625.35,497.65,623.47,528.64,756.34,524.88" shape="poly"
+                        class="modal-trigger">
+                    <area target="_self" alt="Լուսաձոր" title="Լուսաձոր" href="#lusadzor"
+                        coords="383.1,621.6,479.34,621.6,475.12,636.62,381.22,635.68" shape="poly"
+                        class="modal-trigger">
+                    <area target="_self" alt="Բերքաձոր" title="Բերքաձոր" href="#berkadzor"
+                        coords="547.42,649.3,647.42,652.11,655.4,670.42,545.54,667.14" shape="poly"
+                        class="modal-trigger">
+                    <area target="_self" alt="Աստղաշեն" title="Աստղաշեն" href="#astghashen"
+                        coords="415.49,521.13,531.46,524,530.52,538.03,519.25,541.31,481.22,546,417.37,541.31"
+                        shape="poly" class="modal-trigger">
+                    <area target="_self" alt="Խնածախ" title="Խնածախ" href="#khnatsakh"
+                        coords="375.12,704.23,483.57,702.35,483.57,724.41,375.12,725.35" shape="poly"
+                        class="modal-trigger">
+                    <area target="_self" alt="Փառուխ" title="Փառուխ" href="#parukh"
+                        coords="614.55,365.26,611.27,336.15,689.67,339.44,695.31,362.44" shape="poly"
+                        class="modal-trigger">
+                    <area target="_self" alt="Սարդարաշեն" title="Սարդարաշեն" href="#sardarashen"
+                        coords="491.55,377.46,610.33,377.46,611.27,408.45,493.43,408.45" shape="poly"
+                        class="modal-trigger">
+                    <area target="_self" alt="Ռև" title="Ռև" href="#rev"
+                        coords="441.31,379.81,472.30,378.87,474.18,403.76,440.38,408.45" shape="poly"
+                        class="modal-trigger">
+                    <area target="_self" alt="Խաչեն" title="Խաչեն" href="#khachen"
+                        coords="424.41,410.80,427.23,377.93,369.48,378.87,369.48,401.88" shape="poly"
+                        class="modal-trigger">
+                    <area target="_self" alt="Ծաղկաշատ" title="Ծաղկաշատ" href="#tsaghkashat"
+                        coords="448.36,423.47,568.54,428.17,569.48,443.19,451.17,441.31" shape="poly"
+                        class="modal-trigger">
+                    <area target="_self" alt="Խնձրիստան" title="Խնձրիստան" href="#khnatsakh"
+                        coords="281.22,432.86,408.45,422.54,412.21,448.83,280.28,454.46" shape="poly"
+                        class="modal-trigger">
+                    <area target="_self" alt="Ուղտասար" title="Ուղտասար" href="#ughtasar"
+                        coords="718.31,462.91,814.55,463.85,804.69,496.71,719.72,498.59" shape="poly"
+                        class="modal-trigger">
+                    <area target="_self" alt="Հիլիսն" title="Հիլիսն" href="#hilisn"
+                        coords="345.07,461.97,424.41,463.85,423.47,478.87,347.42,482.63,348.36,476.99" shape="poly"
+                        class="modal-trigger">
+                    <area target="_self" alt="Խանցք" title="Խանցք" href="#khanzk"
+                        coords="379.34,487.79,446.48,491.08,443.19,508.92,404.23,514.08,379.34,523.00,373.24,501.88"
+                        shape="poly" class="modal-trigger">
+                    <area target="_self" alt="Պատարա" title="Պատարա" href="#patara"
+                        coords="249.30,529.58,364.32,533.33,362.44,551.64,251.17,551.64" shape="poly"
+                        class="modal-trigger">
+                    <area target="_self" alt="Հովսեփավան" title="Հովսեփավան" href="#hovsepavan"
+                        coords="378.40,562.91,510.33,559.62,507.51,572.77,465.26,579.81,389.20,578.87,376.06,577.00"
+                        shape="poly" class="modal-trigger">
+                    <area target="_self" alt="Դահրավ" title="Դահրավ" href="#dahrav"
+                        coords="331.46,594.37,430.52,600.00,415.49,614.08,331.46,613.15" shape="poly"
+                        class="modal-trigger">
+                    <area target="_self" alt="Շոշ" title="Շոշ" href="#shosh"
+                        coords="538.50,855.87,571.36,859.15,568.54,891.08,539.44,900.00" shape="poly"
+                        class="modal-trigger">
+                    <area target="_self" alt="Մխիթարիշեն" title="Մխիթարիշեն" href="#mkhitarishen"
+                        coords="443.19,925.35,555.40,928.17,554.46,907.04,523.47,904.23,445.54,912.21" shape="poly"
+                        class="modal-trigger">
+                    <area target="_self" alt="Սղնախ" title="Սղնախ" href="#sghnakh"
+                        coords="516.43,1019.72,580.28,1032.86,573.24,987.79,511.27,1003.76" shape="poly"
+                        class="modal-trigger">
+                    <area target="_self" alt="Մոշխմհատ" title="Մոշխմհատ" href="#moshkhmhat"
+                        coords="559.62,1108.00,656.34,1106.10,656.34,1078.87,558.22,1091.08" shape="poly"
+                        class="modal-trigger">
+                    <area target="_self" alt="Ակնաղբյուր" title="Ակնաղբյուր" href="#aknaghbyur"
+                        coords="758.69,1068.08,662.44,1064.32,662.44,1032.39,672.30,1025.35,682.63,1026.29,760.56,1056.34"
+                        shape="poly" class="modal-trigger">
+                    <area target="_self" alt="Սարուշեն" title="Սարուշեն" href="#sarushan"
+                        coords="841.78,1025.35,743.66,1024.41,739.44,997.65,839.44,1002.35" shape="poly"
+                        class="modal-trigger">
+                    <area target="_self" alt="Ջրաղացներ" title="Ջրաղացներ" href="#jraghatsner"
+                        coords="587.32,998.59,702.35,1001.41,699.53,1014.55,643.66,1018.78,636.62,1036.62" shape="poly"
+                        class="modal-trigger">
+                    <area target="_self" alt="Ն․ Սզնեք" title="Ն․ Սզնեք" href="#n-sznekh"
+                        coords="639.44,958.69,672.30,971.83,668.54,989.67,596.24,988.73,600.47,973.71" shape="poly"
+                        class="modal-trigger">
+                    <area target="_self" alt="Վ․ Սզնեք" title="Վ․ Սզնեք" href="#v-sznekh"
+                        coords="580.28,937.56,647.42,939.44,645.54,953.52,620.66,962.44,577.46,952.58" shape="poly"
+                        class="modal-trigger">
+                    <area target="_self" alt="Կարմիր գյուղ" title="Կարմիր գյուղ" href="#karmir-gyugh"
+                        coords="657.28,903.76,645.54,868.54,759.62,872.30,759.62,880.75" shape="poly"
+                        class="modal-trigger">
+                    <area target="_self" alt="Քռասնի" title="Քռասնի" href="#krassni"
+                        coords="594.37,840.38,661.50,841.31,658.69,827.23,633.33,825.35,624.41,813.15,612.21,812.21,595.31,821.13"
+                        shape="poly" class="modal-trigger">
+                    <area target="_self" alt="Դաշուշեն" title="Դաշուշեն" href="#dashushen"
+                        coords="531.46,825.35,522.54,795.31,606.57,795.31,609.39,812.68" shape="poly"
+                        class="modal-trigger">
+                    <area target="_self" alt="Հարավ" title="Հարավ" href="#harav"
+                        coords="611.27,743.66,679.34,744.60,683.57,772.30,653.52,788.73" shape="poly"
+                        class="modal-trigger">
+                    <area target="_self" alt="Դահրազ" title="Դահրազ" href="#dahraz"
+                        coords="663.38,688.26,735.68,693.43,734.74,676.53,709.39,668.54,665.26,676.53" shape="poly"
+                        class="modal-trigger">
+                    <area target="_self" alt="Սառնաղբյուր" title="Սառնաղբյուր" href="#sarnaghbyur"
+                        coords="751.64,664.32,778.40,639.44,739.44,636.62,717.37,636.62,691.55,635.68,661.50,632.39,663.38,648.36"
+                        shape="poly" class="modal-trigger">
+                    <area target="_self" alt="Քյաթուկ" title="Քյաթուկ" href="#kyatuk"
+                        coords="707.51,621.60,712.68,600.47,645.54,588.26,635.68,620.19" shape="poly"
+                        class="modal-trigger">
+                    <area target="_self" alt="Նախջևանիկ" title="Նախջևանիկ" href="#nakhjavanik"
+                        coords="717.37,590.61,711.74,580.75,717.37,587.79,730.52,581.69,804.69,575.59,818.78,575.59,816.43,558.69,700.47,557.75"
+                        shape="poly" class="modal-trigger">
+                    <area target="_self" alt="Վարդաձոր" title="Վարդաձոր" href="#vardadzor"
+                        coords="721.60,603.76,727.70,611.74,737.56,603.76,775.59,601.41,806.57,603.76,822.54,598.59,811.74,586.38,765.73,590.61,739.44,588.73"
+                        shape="poly" class="modal-trigger">
+                    <area target="_self" alt="Վարազաբուն" title="Վարազաբուն" href="#varazabun"
+                        coords="739.44,611.74,854.46,616.90,856.34,632.86,824.41,630.52,790.61,627.70,751.64,625.82,740.38,615.49"
+                        shape="poly" class="modal-trigger">
+                </map>
+            </div>
+
+            <!-- Մոդալ պատուհաններ -->
+<!--            <div id="khangapat-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Խանապատ</h2>-->
+<!--                    <p>1․ Սարգսյան Սլավա, (Ասկերանի շրջան, գյուղ Խանապատ, այժմ ապրում է Երևանում, հուշարձանագետ է։)-->
+<!--                        Պատմում է Կատարո վանքի մասին։-->
+<!--                    </p>-->
+<!--                    <a href=""><p>Կարդալ պատմությունը</p></a>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div id="noragyugh-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Նորագյուղ</h2>-->
+<!--                    <p>Նորագյուղ համայնքի մասին տեղեկատվություն...</p>-->
+<!--                    <p>Այստեղ կարող եք ավելացնել ցանկացած տեքստ կամ պատկերներ համայնքի մասին:</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div id="ivanyan-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Իվանյան</h2>-->
+<!--                    <p>Իվանյան համայնքի մասին տեղեկատվություն...</p>-->
+<!--                    <p>Այստեղ կարող եք ավելացնել ցանկացած տեքստ կամ պատկերներ համայնքի մասին:</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div id="aygestan-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Այգեստան</h2>-->
+<!--                    <p>Այգեստան գյուղի մասին տեղեկություն...</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div id="avetaranots-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Ավետարանոց</h2>-->
+<!--                    <p>Ավետարանոց գյուղի մասին տեղեկություն...</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div id="armenavan-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Արմենավան</h2>-->
+<!--                    <p>Արմենավան գյուղի մասին տեղեկություն...</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div id="khramort-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Խրամորթ</h2>-->
+<!--                    <p>Խրամորթ գյուղի մասին տեղեկություն...</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div id="askeran-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Ասկերան</h2>-->
+<!--                    <p>Ասկերան քաղաքի մասին տեղեկություն...</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div id="lusadzor-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Լուսաձոր</h2>-->
+<!--                    <p>Լուսաձոր գյուղի մասին տեղեկություն...</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div id="berkadzor-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Բերքաձոր</h2>-->
+<!--                    <p>Բերքաձոր գյուղի մասին տեղեկություն...</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div id="astghashen-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Աստղաշեն</h2>-->
+<!--                    <p>Աստղաշեն գյուղի մասին տեղեկություն...</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+            <div id="khnatsakh-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Խնածախ</h2>
+                    <p>1․Կարապետյան Գուրգեն (75 տարեկան, Ասկերանի շրջան, գյուղ Խնածախ, այժմ ապրում է Երևանում):
+                        Պատմում է Պանոր Նանի (բանող նան), Ասկերանի շրջանի Խնածախ գյուղի մասին։
+                    </p>
+                    <a href="../Shtemaran/Askeran_shtemaran%20khnatsakh.html"><p>Կարդալ պատմությունը</p></a>
+                </div>
+            </div>
+
+<!--            <div id="parukh-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Փառուխ</h2>-->
+<!--                    <p>Փառուխ համայնքի մասին տեղեկատվություն...</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div id="sardarashen-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Սարդարաշեն</h2>-->
+<!--                    <p>Սարդարաշեն համայնքի մասին տեղեկատվություն...</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div id="rev-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Ռև</h2>-->
+<!--                    <p>Ռև համայնքի մասին տեղեկատվություն...</p>-->
+<!--                    <p>Ռևը գտնվում է Արցախի Հանրապետության Մարտակերտի շրջանում։ Համայնքը հայտնի է իր բնական-->
+<!--                        գեղեցկությամբ և պատմական հուշարձաններով։</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+            <!-- Modal for Խաչեն -->
+<!--            <div id="khachen-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Խաչեն</h2>-->
+<!--                    <p>Խաչեն համայնքի մասին տեղեկատվություն...</p>-->
+<!--                    <p>Խաչենը պատմական մեծ նշանակություն ունեցող շրջան է, որը հայտնի է իր միջնադարյան ճարտարապետական-->
+<!--                        հուշարձաններով և բնության գեղեցիկ տեսարաններով։</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+            <!-- Modal for Ծաղկաշատ -->
+<!--            <div id="tsaghkashat-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Ծաղկաշատ</h2>-->
+<!--                    <p>Ծաղկաշատ համայնքի մասին տեղեկատվություն...</p>-->
+<!--                    <p>Ծաղկաշատը գյուղ է Արցախի Հանրապետության Ասկերանի շրջանում։ Համայնքը հայտնի է իր պտղատու այգիներով-->
+<!--                        և բարեխառն կլիմայով։</p>-->
+<!--                    <p>Հիմնական զբաղմունքը գյուղատնտեսությունն է, մասնավորապես՝ պտղաբուծությունը և բանջարաբուծությունը։-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+            <!-- Modal for Խնձրիստան -->
+<!--            <div id="khnjristan-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Խնձրիստան</h2>-->
+<!--                    <p>Խնձրիստան համայնքի մասին տեղեկատվություն...</p>-->
+<!--                    <p>Խնձրիստանը գտնվում է Արցախի Հանրապետության Հադրութի շրջանում։ Համայնքը հայտնի է իր մրգատու-->
+<!--                        այգիներով և ավանդական հյութեղ խնձորով։</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+            <!-- Modal for Ուղտասար -->
+<!--            <div id="ughtasar-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Ուղտասար</h2>-->
+<!--                    <p>Ուղտասար համայնքի մասին տեղեկատվություն...</p>-->
+<!--                    <p>Ուղտասարը գյուղ է Արցախի Հանրապետության Մարտունու շրջանում։ Անունը կապված է մոտակա Ուղտասար լեռան-->
+<!--                        հետ, որը իր ձևով հիշեցնում է ուղտ։</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+            <!-- Modal for Հիլիսն -->
+<!--            <div id="hilisn-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Հիլիսն</h2>-->
+<!--                    <p>Հիլիսն համայնքի մասին տեղեկատվություն...</p>-->
+<!--                    <p>Հիլիսն համայնքը տեղակայված է Արցախի Հանրապետության Շուշիի շրջանում։ Պատմական փաստաթղթերում առաջին-->
+<!--                        անգամ հիշատակվում է 18-րդ դարում։</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+            <!-- Modal for Խանցք -->
+<!--            <div id="khanzk-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Խանցք</h2>-->
+<!--                    <p>Խանցք համայնքի մասին տեղեկատվություն...</p>-->
+<!--                    <p>Խանցքը գյուղ է Արցախի Հանրապետության Ասկերանի շրջանում։ Պատմականորեն կարևոր դեր է ունեցել որպես-->
+<!--                        տարանցիկ կետ առևտրային ճանապարհներին։</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+            <!-- Modal for Պատարա -->
+<!--            <div id="patara-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Պատարա</h2>-->
+<!--                    <p>Պատարա համայնքի մասին տեղեկատվություն...</p>-->
+<!--                    <p>Պատարան գյուղ է Արցախի Հանրապետության Մարտակերտի շրջանում։ Համայնքը հայտնի է իր ավանդական-->
+<!--                        ճարտարապետությամբ և բնական ջրաղացներով։</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+            <!-- Modal for Հովսեփավան -->
+<!--            <div id="hovsepavan-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Հովսեփավան</h2>-->
+<!--                    <p>Հովսեփավան համայնքի մասին տեղեկատվություն...</p>-->
+<!--                    <p>Հովսեփավանը գտնվում է Արցախի Հանրապետության Մարտունու շրջանում։ Կոչվում է ի պատիվ հայ մեծանուն-->
+<!--                        գիտնական Հովսեփ Օրբելու։</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+            <!-- Modal for Դահրավ -->
+<!--            <div id="dahrav-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Դահրավ</h2>-->
+<!--                    <p>Դահրավ համայնքի մասին տեղեկատվություն...</p>-->
+<!--                    <p>Դահրավը գյուղ է Արցախի Հանրապետության Հադրութի շրջանում։ Պատմական աղբյուրներում հիշատակվում է-->
+<!--                        դեռևս միջնադարից։ Համայնքը հարուստ է պատմամշակութային հուշարձաններով։</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--             Modal Dialogs -->
+            <div id="shosh-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Շոշ</h2>
+                    <p>1․ Սարգսյան Լենա (1974 թ., Արցախի Հանրապետություն, Շոշ գյուղ, բռնագաղթից հետո ՀՀ, Հրազդան քաղաք:) Պատմում է Աբարանց խաչի, Լալիկ աղբյուրի, Շոշ գյուղի անվան պատմության, Կարմր տառանի, Հուռունց ազգի, Պըլըպուղու, Դերուն ծորում երգի մասին։</p>
+                    <a href="../Shtemaran/Askeran_shtemaran%20shosh.html"><p>Կարդալ պատմությունը</p></a>
+                </div>
+            </div>
+
+<!--            <div id="mkhitarishen-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Մխիթարիշեն</h2>-->
+<!--                    <p>Մխիթարիշեն համայնքի մասին տեղեկատվություն...</p>-->
+<!--                    <p>Համայնքը կոչվում է ի պատիվ Մխիթար Գոշի։ Տարածքը հարուստ է պտղատու այգիներով և բնական ջրաղացներով։-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div id="sghnakh-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Սղնախ</h2>-->
+<!--                    <p>Սղնախ համայնքի մասին տեղեկատվություն...</p>-->
+<!--                    <p>Սղնախը հայտնի է իր ավանդական ճարտարապետությամբ և բնական ջրամբարներով։ Համայնքը գտնվում է ծովի-->
+<!--                        մակարդակից 1200 մետր բարձրության վրա։</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div id="moshkhmhat-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Մոշխմհատ</h2>-->
+<!--                    <p>Մոշխմհատ համայնքի մասին տեղեկատվություն...</p>-->
+<!--                    <p>Այս գյուղը հայտնի է իր մշակութային ավանդույթներով և ձեռագործ արտադրանքով։ Տարածքում կան բազմաթիվ-->
+<!--                        պատմական հուշարձաններ։</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div id="aknaghbyur-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Ակնաղբյուր</h2>-->
+<!--                    <p>Ակնաղբյուր համայնքի մասին տեղեկատվություն...</p>-->
+<!--                    <p>Գյուղը իր անունը ստացել է բազմաթիվ բնական աղբյուրների պատճառով։ Տարածքը հարուստ է անտառներով և-->
+<!--                        բուսականությամբ։</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div id="sarushan-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Սարուշեն</h2>-->
+<!--                    <p>Սարուշեն համայնքի մասին տեղեկատվություն...</p>-->
+<!--                    <p>Սարուշենը գտնվում է լեռնաշղթայի ստորոտին։ Համայնքը հայտնի է իր մեղվաբուծությամբ և ավանդական-->
+<!--                        մեղրով։</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div id="jraghatsner-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Ջրաղացներ</h2>-->
+<!--                    <p>Ջրաղացներ համայնքի մասին տեղեկատվություն...</p>-->
+<!--                    <p>Այս տարածքը պատմականորեն հայտնի է իր ջրաղացներով, որոնք գործել են գետի հոսանքին զուգահեռ։-->
+<!--                        Պահպանվել են մի քանի հին ջրաղացների ավերակներ։</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div id="n-sznekh-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Նոր Սզնեք</h2>-->
+<!--                    <p>Նոր Սզնեք համայնքի մասին տեղեկատվություն...</p>-->
+<!--                    <p>Համայնքը կառուցվել է սովետական տարիներին։ Տարածքում զարգացած է հացահատիկի մշակությունը և-->
+<!--                        անասնապահությունը։</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div id="v-sznekh-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Վերին Սզնեք</h2>-->
+<!--                    <p>Վերին Սզնեք համայնքի մասին տեղեկատվություն...</p>-->
+<!--                    <p>Գյուղը տեղակայված է բլրալանջին և առանձնանում է իր բնապատկերով։ Պահպանել է ավանդական հայկական-->
+<!--                        ճարտարապետությունը։</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div id="karmir-gyugh-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Կարմիր գյուղ</h2>-->
+<!--                    <p>Կարմիր գյուղ համայնքի մասին տեղեկատվություն...</p>-->
+<!--                    <p>Անունը ստացել է շրջակա կարմիր հողերի պատճառով։ Համայնքը հայտնի է իր խեցեգործական ավանդույթներով և-->
+<!--                        կավե արտադրանքով։</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+            <!-- Modal Dialogs -->
+<!--            <div id="krassni-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Քռասնի</h2>-->
+<!--                    <p>Քռասնի համայնքի մասին տեղեկատվություն...</p>-->
+<!--                    <p>Քռասնին պատմական գյուղ է Արցախում, որը հայտնի է իր հնագույն մշակույթով և ավանդույթներով։ Գտնվում-->
+<!--                        է լեռնային գեղատեսիլ վայրում։</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div id="dashushen-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Դաշուշեն</h2>-->
+<!--                    <p>Դաշուշեն համայնքի մասին տեղեկատվություն...</p>-->
+<!--                    <p>Դաշուշենը հայտնի է իր բնական գեղեցկությամբ և ավանդական ճարտարապետությամբ։ Համայնքը հարուստ է-->
+<!--                        մրգատու այգիներով։</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div id="harav-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Հարավ</h2>-->
+<!--                    <p>Հարավ համայնքի մասին տեղեկատվություն...</p>-->
+<!--                    <p>Հարավ համայնքը գտնվում է Արցախի հարավային մասում։ Տարածքը հարուստ է պատմամշակութային-->
+<!--                        հուշարձաններով։</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div id="dahraz-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Դահրազ</h2>-->
+<!--                    <p>Դահրազ համայնքի մասին տեղեկատվություն...</p>-->
+<!--                    <p>Դահրազը հայտնի է իր ավանդական ճարտարապետությամբ և բնական ջրաղացներով։ Համայնքը գտնվում է ծովի-->
+<!--                        մակարդակից 1100 մետր բարձրության վրա։</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div id="sarnaghbyur-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Սառնաղբյուր</h2>-->
+<!--                    <p>Սառնաղբյուր համայնքի մասին տեղեկատվություն...</p>-->
+<!--                    <p>Այս գյուղը իր անունը ստացել է իր տարածքում գտնվող սառնորակ աղբյուրներից։ Տարածքը հարուստ է-->
+<!--                        անտառներով և բուսականությամբ։</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div id="kyatuk-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Քյաթուկ</h2>-->
+<!--                    <p>Քյաթուկ համայնքի մասին տեղեկատվություն...</p>-->
+<!--                    <p>Քյաթուկը հայտնի է իր մշակութային ավանդույթներով և ձեռագործ արտադրանքով։ Տարածքում կան բազմաթիվ-->
+<!--                        պատմական հուշարձաններ։</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div id="nakhjavanik-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Նախջևանիկ</h2>-->
+<!--                    <p>Նախջևանիկ համայնքի մասին տեղեկատվություն...</p>-->
+<!--                    <p>Նախջևանիկը գտնվում է լեռնաշղթայի ստորոտին։ Համայնքը հայտնի է իր մեղվաբուծությամբ և ավանդական-->
+<!--                        մեղրով։</p>-->
+<!--                </div>-->
+<!--            </div>-->
+
+            <div id="vardadzor-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Վարդաձոր</h2>
+                    <p>Մարգարյան Ոստանիկ Իշխանի (ծնվ. 1937թ. օգոստոսի 20-ին, Ասկերանի
+                        շրջանի գ. Վարդաձորում, մահացել է 2021թ հուլիսի 10-ին): Այժմ նրա աճյունը
+                        ամփոփված է Վարդաձորի գերեզմանատանը:</p>
+                    <a href="../Shtemaran/Askeran_shtemaran%20vardadzor.html"><p>Կարդալ պատմությունը</p></a>
+                </div>
+            </div>
+
+<!--            <div id="varazabun-modal" class="modal">-->
+<!--                <div class="modal-content">-->
+<!--                    <span class="close">&times;</span>-->
+<!--                    <h2>Վարազաբուն</h2>-->
+<!--                    <p>Վարազաբուն համայնքի մասին տեղեկատվություն...</p>-->
+<!--                    <p>Վարազաբունը պատմական գյուղ է, որը կառուցվել է լեռնալանջին։ Համայնքը պահպանել է իր ավանդական-->
+<!--                        կենսաձևը և ճարտարապետությունը։</p>-->
+<!--                </div>-->
+<!--            </div>-->
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="footer-col">
+                    <h4>Հղումներ</h4>
+                    <ul>
+                        <li><a href="../index.html">Գլխավոր</a></li>
+                        <li><a href="../contact.html">Կոնտակտ</a></li>
+                        <li><a href="../traditions.html">Մեր մասին</a></li>
+                        <li><a href="../teslakan.html">Տեսլական</a></li>
+                        <li><a href="../Askeran/askeran.html">Ասկերանի շրջան</a></li>
+                        <li><a href="../Hadrut/Hadrut.html">Հադրութի շրջան</a></li>
+                        <li><a href="../Martakert/martakert.html">Մարտակերտի շրջան</a></li>
+                        <li><a href="../Martuni/martuni.html">Մարտունու շրջան</a></li>
+                        <li><a href="../Qashatax/qashatax.html">Քաշաթախի շրջան</a></li>
+                        <li><a href="../Shahumyan/shahumyan.html">Շահումյանի շրջան</a></li>
+                        <li><a href="../shushi.html">Շուշիի շրջան</a></li>
+                        <li><a href="../Stepanakert/stepanakert.html">Ստեփանակերտի շրջան</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Հետևեք մեզ</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Մոդալի ֆունկցիոնալություն
+        document.addEventListener('DOMContentLoaded', function () {
+            // Ստանում ենք բոլոր մոդալ տրիգերները
+            const triggers = document.querySelectorAll('.modal-trigger');
+
+            // Ստանում ենք բոլոր մոդալները
+            const modals = document.querySelectorAll('.modal');
+
+            // Ստանում ենք բոլոր փակելու կոճակները
+            const closeButtons = document.querySelectorAll('.close');
+
+            // Յուրաքանչյուր տրիգերի համար ավելացնում ենք event listener
+            triggers.forEach(trigger => {
+                trigger.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = this.getAttribute('href').substring(1) + '-modal';
+                    document.getElementById(target).style.display = 'block';
+                });
+            });
+
+            // Փակելու կոճակների համար
+            closeButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    this.closest('.modal').style.display = 'none';
+                });
+            });
+
+            // Փակել մոդալը երբ օգտագործողը կտտացնի դրսում
+            window.addEventListener('click', function (e) {
+                if (e.target.classList.contains('modal')) {
+                    e.target.style.display = 'none';
+                }
+            });
+
+            // ESC ստեղնը մոդալը փակելու համար
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    modals.forEach(modal => {
+                        modal.style.display = 'none';
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

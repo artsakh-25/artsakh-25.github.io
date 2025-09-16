@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Քաշաթաղ</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="website icon" type="png" href="../image2/Emblem.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Մոդալի ստիլեր */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .modal-content {
+            background-color: #f8f9fa;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 60%;
+            max-width: 500px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: modalopen 0.5s;
+        }
+
+        @keyframes modalopen {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: black;
+        }
+
+        /* Քարտեզի կոնտեյներ */
+        #map-container {
+            margin: 0 auto;
+        }
+
+        #map-container {
+            position: relative;
+            width: 1132px;
+            height: 1470px;
+            margin: 0 auto;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../png (1) (1).png" alt="">
+            <h1>Արցախ</h1>
+        </div>
+        <nav>
+            <ul>
+
+                <li><a href="../index.html">Գլխավոր</a></li>
+                <li><a href="../contact.html">Կոնտակտ</a></li>
+                <li><a href="../traditions.html">Մեր մասին</a></li>
+                <!--<li><a href="religion.html"></a></li> -->
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>ԱՐՑԱԽՅԱՆ ԱՎԱՆԴԱԶՐՈՒՅՑՆԵՐԻ ՔԱՐՏԵԶԱԳՐՎԱԾ ՇՏԵՄԱՐԱՆ</h2>
+            <p class="e">Խաղաղության և ավանդույթների աշխարհ</p>
+            <p class="e">2024-2025</p>
+            <a href="#" class="cta-button">Իմացիր ավելին</a>
+        </div>
+    </section>
+
+   <!--  <section class="intro">
+        <h2 class="a" style="color:#6d7fd6 ;" >Քաշաթաղ</h2>
+    </section> -->
+
+    <section class="content">
+
+
+
+        <div>
+            <h1 style="text-align: center; margin: 25px;color: #4f63ca;">Քաշաթաղի Քարտեզ</h1>
+            <p style="text-align: center; margin: 15px;">Սեղմեք համայնքի վրա՝ մանրամասն տեղեկություն ստանալու համար</p>
+
+            <div id="map-container">
+                <img src="Քաշաթաղ.svg" usemap="#image-map" alt="Հադրութի քարտեզ" id="map-container">
+
+                <map name="image-map">
+                    <area target="_self" alt="Սարալանջ" title="Սարալանջ" href="#saralanj"
+                        coords="491,475,595,481,516,523" shape="poly" class="modal-trigger">
+                    <area target="_self" alt="Պլեթանց" title="Պլեթանց" href="#pletanc"
+                        coords="653.52,302.82,653.52,290.61,791.55,288.73,787.32,303.76" shape="poly"
+                        class="modal-trigger">
+                    <area target="_self" alt="Տյաք" title="Տյաք" href="#tyaq"
+                        coords="614.55,365.26,611.27,336.15,689.67,339.44,695.31,362.44" shape="poly"
+                        class="modal-trigger">
+                    <area target="_self" alt="Հայկավան" title="Հայկավան" href="#haykavan"
+                        coords="379.34,487.79,446.48,491.08,443.19,508.92,404.23,514.08,379.34,523.00,373.24,501.88"
+                        shape="poly" class="modal-trigger">
+                    <area target="_self" alt="Առաջամուղ" title="Առաջամուղ" href="#arajamux"
+                        coords="717.37,590.61,711.74,580.75,717.37,587.79,730.52,581.69,804.69,575.59,818.78,575.59,816.43,558.69,700.47,557.75"
+                        shape="poly" class="modal-trigger">
+                </map>
+            </div>
+
+            <!-- Մոդալ պատուհաններ -->
+
+            <div id="saralanj-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Նորագյուղ</h2>
+                    <p>Lorem...</p>
+                    <p>Lorem:</p>
+                </div>
+            </div>
+
+            <div id="pletanc-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Պլեթանց</h2>
+                    <p>Lorem</p>
+                    <p>Lorem...</p>
+                </div>
+            </div>
+
+            <div id="tyaq-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Տյաք</h2>
+                    <p>Lorem</p>
+                    <p>Lorem...</p>
+                </div>
+            </div>
+
+            <div id="haykavan-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Հայկավան</h2>
+                    <p>Lorem</p>
+                    <p>Lorem...</p>
+                </div>
+            </div>
+
+            <div id="arajamux-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Առաջամուղ</h2>
+                    <p>Lorem</p>
+                    <p>Lorem</p>
+                </div>
+            </div>
+        </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="footer-col">
+                    <h4>Հղումներ</h4>
+                    <ul>
+                        <li><a href="../index.html">Գլխավոր</a></li>
+                        <li><a href="../contact.html">Կոնտակտ</a></li>
+                        <li><a href="../traditions.html">Մեր մասին</a></li>
+                        <li><a href="../teslakan.html">Տեսլական</a></li>
+                        <li><a href="../Askeran/askeran.html">Ասկերանի շրջան</a></li>
+                        <li><a href="../Hadrut/Hadrut.html">Հադրութի շրջան</a></li>
+                        <li><a href="../Martakert/martakert.html">Մարտակերտի շրջան</a></li>
+                        <li><a href="../Martuni/martuni.html">Մարտունու շրջան</a></li>
+                        <li><a href="../Qashatax/qashatax.html">Քաշաթախի շրջան</a></li>
+                        <li><a href="../Shahumyan/shahumyan.html">Շահումյանի շրջան</a></li>
+                        <li><a href="../shushi.html">Շուշիի շրջան</a></li>
+                        <li><a href="../Stepanakert/stepanakert.html">Ստեփանակերտի շրջան</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Հետևեք մեզ</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Մոդալի ֆունկցիոնալություն
+        document.addEventListener('DOMContentLoaded', function () {
+            // Ստանում ենք բոլոր մոդալ տրիգերները
+            const triggers = document.querySelectorAll('.modal-trigger');
+
+            // Ստանում ենք բոլոր մոդալները
+            const modals = document.querySelectorAll('.modal');
+
+            // Ստանում ենք բոլոր փակելու կոճակները
+            const closeButtons = document.querySelectorAll('.close');
+
+            // Յուրաքանչյուր տրիգերի համար ավելացնում ենք event listener
+            triggers.forEach(trigger => {
+                trigger.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = this.getAttribute('href').substring(1) + '-modal';
+                    document.getElementById(target).style.display = 'block';
+                });
+            });
+
+            // Փակելու կոճակների համար
+            closeButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    this.closest('.modal').style.display = 'none';
+                });
+            });
+
+            // Փակել մոդալը երբ օգտագործողը կտտացնի դրսում
+            window.addEventListener('click', function (e) {
+                if (e.target.classList.contains('modal')) {
+                    e.target.style.display = 'none';
+                }
+            });
+
+            // ESC ստեղնը մոդալը փակելու համար
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    modals.forEach(modal => {
+                        modal.style.display = 'none';
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
